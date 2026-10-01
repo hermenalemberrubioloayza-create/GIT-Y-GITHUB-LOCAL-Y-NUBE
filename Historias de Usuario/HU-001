@@ -1,0 +1,47 @@
+*Como:dueño de un negocio de ropa 
+*Quiero: un aplicativo donde esten los precios y la ropa que vendo
+*Para: poder tener el control de las ganancias que ingresen
+
+Registro y gestión de prendas
+Escenario 1: Crear una nueva prenda
+Dado que el dueño está en el módulo de inventario/catálogo,
+Cuando ingresa el nombre de la prenda, talla/color, precio de costo, precio de venta y stock inicial, y presiona "Guardar",
+Entonces el producto debe quedar registrado en el catálogo y disponible para la venta.
+
+Escenario 2: Validación de precios válidos
+Dado que el dueño intenta registrar una prenda,
+Cuando ingresa un precio negativo o deja el campo vacío,
+Entonces el sistema muestra un mensaje de error y no permite guardar el producto.
+
+2. Registro de ventas
+Escenario 3: Registrar una venta exitosa
+Dado que hay prendas en el catálogo con stock disponible,
+Cuando el dueño selecciona una o más prendas y confirma la venta,
+Entonces el sistema descuenta el stock vendido y registra el ingreso monetario con la fecha actual.
+
+3. Control y visualización de ganancias
+
+Escenario 4: Cálculo automático de ganancias
+Dado que se han registrado ventas en el aplicativo,
+Cuando el dueño consulta el módulo o reporte de ganancias,
+Entonces el sistema muestra:
+Total de ingresos brutos (Suma de precios de venta).
+Costo total de las prendas vendidas.
+Ganancia neta calculada como: (Ingresos Brutos - Costos).
+
+Escenario 5: Filtro por períodos de tiempo
+Dado que el dueño está en la pantalla de ganancias,
+Cuando selecciona un filtro de fecha (Hoy, Esta semana, Este mes o Rango personalizado),
+Entonces los valores de ingresos y ganancias se actualizan reflejando únicamente las ventas de ese período.
+
+Opción 2: Formato Lista / Checklist de Aceptación
+Gestión de productos y precios:
+El sistema debe permitir registrar, editar y listar prendas con: Nombre, Categoría/Talla, Precio de Costo, Precio de Venta y Stock.
+No se deben permitir precios negativos ni campos obligatorios vacíos.
+Registro de transacciones:
+El sistema debe permitir registrar ventas seleccionando los productos del catálogo.
+Cada venta debe actualizar el inventario automáticamente y asociarse a la fecha y hora de la transacción.
+Control de ganancias e informes:
+El aplicativo debe mostrar una pantalla o dashboard con el balance de ingresos y la ganancia neta.
+La ganancia debe calcularse automáticamente restando el precio de costo del precio de venta.
+Debe permitir filtrar los reportes de ganancias por rangos de fecha (diario, semanal, mensual).
